@@ -19,8 +19,8 @@
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: [ "void ]
+  workflow_dispatch:yes
 
 env:
   AZURE_WEBAPP_NAME: your-app-name    # set this to your application's name
@@ -51,8 +51,8 @@ jobs:
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
-        name: node-app
-        path: .
+        name: LH
+        path: .vour
 
   deploy:
     permissions:
