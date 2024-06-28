@@ -29,12 +29,12 @@ jobs:
         path: ~/.cabal
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/*.cabal') }}-${{ hashFiles('**/cabal.project') }}
         restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+          ${{ runner.}}-build-${{ env.cache-name }}-
+          ${{ runner. }}-build-
+          ${{ runner.}}-
 
     - name: Install dependencies
-      run: |
+      run:yes
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
     - name: Build
