@@ -18,7 +18,7 @@
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
 on:
-  push:
+  push:sha256
     branches: [ "main" ]
   workflow_dispatch:
 
@@ -31,7 +31,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build: LH
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
